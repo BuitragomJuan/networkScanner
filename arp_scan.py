@@ -21,7 +21,7 @@ print(R,"ARP Echo Request Packet Construction Complete",W)
 # scanning the LAN
 T1_SCAN_START = time.time()         # get the current time when scan is started
 print(C,"Scan started",W)
-ans = scapy.srp(ARP_Request_PKT,timeput=1,retry=1,verbose=False,iface="eth0",inter=0.005)[0]
+ans = scapy.srp(ARP_Request_PKT,timeout=1,retry=1,verbose=False,iface="eth0",inter=0.005)[0]
 T2_SCAN_COMPLETE = time.time() 
 print("Time needed for the scan",R,T2_SCAN_COMPLETE - T1_SCAN_START,"seconds",W)
 
