@@ -13,7 +13,7 @@ W="\033[0m"     #white
 ether_req       = scapy.Ether()             # Ether header
 ether_req.dst   = "ff:ff:ff:ff:ff:ff"       # broadcast MAC address
 arp_req         = scapy.ARP()               # ARP header
-arp_req.pdst    = "192.168.1.0/24"          # set the ip address or the LAN subnet to be scanned
+arp_req.pdst    = "0.0.0.0/24"          # set the ip address or the LAN subnet to be scanned
 ARP_Request_PKT = ether_req/arp_req         # complete ARP packet
 print(R,"ARP Echo Request Packet Construction Complete",W)
 
